@@ -1,0 +1,6 @@
+{
+  "name": "Terminus Game",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  
+  "postCreateCommand": "echo 'source /workspaces/terminus-like-template/.game/wrappers.sh 2>/dev/null || true' >> ~/.bashrc"
+}
