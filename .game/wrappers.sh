@@ -1,5 +1,5 @@
 # .terminus/wrappers.sh
-echo "🎮 Terminus wrappers loaded!"
+echo "🎮 Terminus-like wrappers loaded!"
 
 function test_terminus() {
     echo "It works!"
