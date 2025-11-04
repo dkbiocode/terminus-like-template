@@ -4,12 +4,21 @@ echo "🎮 Terminus-like wrappers loaded!"
 # Path to shared blank image
 BLANK_IMAGE="/workspaces/terminus-like-template/.game/blank.jpg"
 
+# check for a ls alias "ls --color=auto" is common
+# and remove it
+if alias ls >/dev/null 2>&1
+then
+    unalias ls
+fi
+
 function ls() {
+    
     local target_dir="${1:-.}"
     
     # Check if path is valid
     if [[ ! -d "$target_dir" ]]; then
         echo "That is not a valid object to look at."
+        
         return 1
     fi
     
@@ -35,6 +44,7 @@ function ls() {
         fi
     done
     [[ "$has_items" == false ]] && echo "  None"
+    
 }
 
 function cd() {
