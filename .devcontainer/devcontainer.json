@@ -2,5 +2,5 @@
   "name": "Terminus Game",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
-  "postCreateCommand": "/usr/bin/env bash /workspaces/terminus-like-template/.devcontainer/setup.sh"
+  "postCreateCommand": "bash /workspaces/terminus-like-template/.devcontainer/setup.sh"
 }
