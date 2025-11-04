@@ -1,0 +1,7 @@
+sudo apt-get update
+
+sudo apt-get install -y git-lfs
+
+git lfs install
+
+echo 'source /workspaces/terminus-like-template/.game/wrappers.sh 2>/dev/null || true' >> ~/.bashrc"

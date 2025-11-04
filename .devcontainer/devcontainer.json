@@ -2,5 +2,5 @@
   "name": "Terminus Game",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   
-  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git-lfs && git lfs install && echo 'source /workspaces/terminus-like-template/.game/wrappers.sh 2>/dev/null || true' >> ~/.bashrc"
+  "postCreateCommand": "/usr/bin/env bash /workspaces/terminus-like-template/.devcontainer/setup.sh"
 }
