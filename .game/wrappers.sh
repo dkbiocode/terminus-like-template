@@ -72,7 +72,7 @@ function less() {
         local item_name="$(basename "$1")"
         
         # Look for image in .game directory
-        for ext in jpg png gif; do
+        for ext in jpg png gif pdf; do
             if [[ -f ".game/${item_name}.${ext}" ]]; then
                 code --reuse-window ".game/${item_name}.${ext}"
                 break
