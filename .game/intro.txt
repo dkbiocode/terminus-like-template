@@ -1,1 +1,6 @@
-The forest is ripe with interesting characters. Is that Fozzie?!?!
+The forest is ripe with interesting characters. 
+
+Use "ls" to look around. 
+
+Use "less" to take a closer look at something.
+(try less InterestingCharacter)

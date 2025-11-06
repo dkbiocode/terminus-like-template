@@ -1,8 +1,7 @@
 # .game/wrappers.sh
-echo "🎮 Terminus-like wrappers loaded!"
 
 # Path to shared blank image
-BLANK_IMAGE="/workspaces/terminus-like-template/.game/blank.jpg"
+BLANK_IMAGE="/workspaces/terminus-like-template/.game/blank_image.jpg"
 
 # check for a ls alias "ls --color=auto" is common
 # and remove it
@@ -21,6 +20,11 @@ function ls() {
         
         return 1
     fi
+
+    if [[ -e ".game/scene.jpg" ]]; then
+        code --reuse-window .game/scene.jpg
+    fi
+
     
     # List directories as Locations (excluding .game)
     echo "Locations:"
@@ -91,3 +95,9 @@ function cat() {
 function test_game() {
     echo "It works!"
 }
+
+PS1="> "
+
+if [ -e ".game/intro.txt" ]; then
+    /usr/bin/cat ".game/intro.txt"
+fi
